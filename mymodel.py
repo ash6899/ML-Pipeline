@@ -5,7 +5,6 @@ from keras.layers import Conv2D, MaxPooling2D, ZeroPadding2D
 from keras.layers.normalization import BatchNormalization
 from keras.regularizers import l2
 from keras.datasets import fashion_mnist
-from keras.utils import np_utils
 import keras
 import sys
 import os
@@ -68,12 +67,9 @@ print('Test accuracy:', scores[1])
 accuracy_file = open('/root/accuracy.txt','w')
 accuracy_file.write(str(scores[1]))
 accuracy_file.close()
-plot_model(model, to_file='fashion-mnist.png', show_shapes=True, show_layer_names=True)
-
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
 host_address = "khandelwalyash6899@gmail.com"
 host_pass = "012345aB"
 guest_address = "yashkhandelwal2017@gmail.com"
@@ -87,11 +83,6 @@ message['From'] = host_address
 message['To'] = guest_address
 message['Subject'] = subject
 message.attach(MIMEText(content, 'plain'))
-fp = open('fashion-mnist.png', 'rb')
-msgImage = MIMEImage(fp.read())
-fp.close()
-msgImage.add_header('Content-ID', '<image1>')
-message.attach(msgImage)
 session = smtplib.SMTP('smtp.gmail.com', 587)
 session.starttls()
 session.login(host_address, host_pass)
