@@ -1,6 +1,6 @@
-data_file = open('/root/data.txt','r')
-input_file = open('/root/input.txt','r')
-accuracy_file = open('/root/accuracy.txt','r')
+data_file = open('/mlops/data.txt','r')
+input_file = open('/mlops/input.txt','r')
+accuracy_file = open('/mlops/accuracy.txt','r')
 
 data = data_file.read()
 data = data.split('\n')
@@ -82,8 +82,8 @@ data_file.close()
 input_file.close()
 
 
-data_file = open('/root/data.txt','w')
-input_file = open('/root/input.txt','w')
+data_file = open('/mlops/data.txt','w')
+input_file = open('/mlops/input.txt','w')
 
 data_file_data = str(old_accuracy) + '\n' + str(layer) + '\n' + str(line) + '\n' + str(entered_data) + '\n' + str(old_data) + '\n' + str(index_fc)
 
