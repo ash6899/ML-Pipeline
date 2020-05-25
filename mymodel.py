@@ -8,6 +8,7 @@ from keras.datasets import fashion_mnist
 from keras.utils import np_utils
 import keras
 import sys
+import os
 from keras.utils.vis_utils import plot_model
 sys.stdin=open('/root/input.txt','r')
 (x_train, y_train), (x_test, y_test)  = fashion_mnist.load_data()
@@ -68,7 +69,7 @@ accuracy_file = open('/root/accuracy.txt','w')
 accuracy_file.write(str(scores[1]))
 accuracy_file.close()
 plot_model(model, to_file='fashion-mnist.png', show_shapes=True, show_layer_names=True)
-import os
+
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
