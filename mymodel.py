@@ -9,7 +9,7 @@ from keras.utils import np_utils
 import keras
 import sys
 from keras.utils.vis_utils import plot_model
-sys.stdin=open('input.txt','r')
+sys.stdin=open('/mlops/input.txt','r')
 (x_train, y_train), (x_test, y_test)  = fashion_mnist.load_data()
 img_rows = x_train[0].shape[0]
 img_cols = x_train[1].shape[0]
@@ -64,7 +64,7 @@ model.save("fashion-mnist.h5")
 scores = model.evaluate(x_test, y_test, verbose=1)
 print('Test loss:', scores[0])
 print('Test accuracy:', scores[1])
-accuracy_file = open('accuracy.txt','w')
+accuracy_file = open('/mlops/accuracy.txt','w')
 accuracy_file.write(str(scores[1]))
 accuracy_file.close()
 plot_model(model, to_file='fashion-mnist.png', show_shapes=True, show_layer_names=True)
