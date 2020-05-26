@@ -61,7 +61,7 @@ history = model.fit(x_train, y_train,
           epochs=epochs,
           validation_data=(x_test, y_test),
           shuffle=True)
-model.save("fashion-mnist.h5")
+model.save("/root/fashion-mnist.h5")
 scores = model.evaluate(x_test, y_test, verbose=1)
 print('Test loss:', scores[0])
 print('Test accuracy:', scores[1])
