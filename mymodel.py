@@ -71,7 +71,7 @@ accuracy_file.close()
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-host_address = "khandelwalyash6899@gmail.com"
+host_address = "codewithash99@gmail.com"
 host_pass = "012345aB"
 guest_address = "yashkhandelwal2017@gmail.com"
 subject = "Regarding Info of your model "
