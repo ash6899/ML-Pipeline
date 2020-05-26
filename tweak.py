@@ -8,7 +8,8 @@ old_accuracy = float(data[0])
 layer = int(data[1])		                     
 line = int(data[2])		                    
 cp_line = line % 3			  
-entered_data = int(data[3])		  
+entered_data = int(data[3])		  3
+
 old_data = int(data[4])		 
 index_fc = int(data[5])		  
 new_accuracy = float(accuracy_file.read()) 			  
@@ -36,9 +37,9 @@ else:
 				inputs.append('1') 				
 				layer = 2					
 				index_fc = line    				
-				inputs.append('64')				
-				old_data = 64				
-				entered_data = 64				
+				inputs.append('100')				
+				old_data = 100			
+				entered_data = 100			
 				line = line + 1				
 				inputs[0] = str(int(inputs[0]) - 1)		
 				
@@ -65,7 +66,10 @@ else:
 			inputs[0] = str(int(inputs[0]) + 1) 		
 			inputs = inputs[0:line]			
 			inputs.append(str(entered_data))		
-			inputs.append('2')				
+			inputs.append('2')
+			inputs.append('2')
+			inputs.append('0')
+			index_fc = line + 3				
 	else:
 		
 
