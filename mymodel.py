@@ -4,13 +4,14 @@ from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Conv2D, MaxPooling2D, ZeroPadding2D
 from keras.layers.normalization import BatchNormalization
 from keras.regularizers import l2
-from keras.datasets import mnist
+from keras.datasets import fashion_mnist
+from keras.utils import np_utils
 import keras
 import sys
 import os
 from keras.utils.vis_utils import plot_model
 sys.stdin=open('/root/input.txt','r')
-(x_train, y_train), (x_test, y_test)  = mnist.load_data()
+(x_train, y_train), (x_test, y_test)  = fashion_mnist.load_data()
 img_rows = x_train[0].shape[0]
 img_cols = x_train[1].shape[0]
 x_train = x_train.reshape(x_train.shape[0], img_rows, img_cols, 1)
