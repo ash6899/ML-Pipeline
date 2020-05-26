@@ -8,7 +8,7 @@ old_accuracy = float(data[0])
 layer = int(data[1])		                     
 line = int(data[2])		                    
 cp_line = line % 3			  
-entered_data = int(data[3])		  3
+entered_data = int(data[3])		  
 
 old_data = int(data[4])		 
 index_fc = int(data[5])		  
